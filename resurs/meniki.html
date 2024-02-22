@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>move mouse</title>
+
+
+<style>
+    body{
+        width: 1200px;
+        height: 400px;
+    }
+
+    #olma {
+        position: absolute;
+        cursor: pointer;
+        /* top: 10px; */
+        /* left: 10px; */
+        /* visibility: hidden; */
+        width: 150px;
+        height: 150px;
+        top: 10px;
+        left: 750px;
+        /* background: rgba(255, 166, 0, 0.562); */
+    }
+
+     #anor {
+        position: absolute;
+        cursor: pointer;
+        top: 40px;
+        left: 750px;
+        /* visibility: hidden; */
+        /* background: rgba(255, 166, 255, 0.562); */
+    }
+
+    #kivi {
+        position: absolute;
+        cursor: pointer;
+        top: 80px;
+        left: 770px;
+        /* visibility: hidden; */
+        /* background: rgba(255, 16, 255, 0.562); */
+    }
+    #limon {
+        top: 130px;
+        left: 770px;
+        position: absolute;
+        cursor: pointer;
+        /* visibility: hidden; */
+        /* background: rgba(25, 166, 255, 0.562); */
+    }
+
+    #nok {
+        left: 670px;
+        top: 170px;
+
+        position: absolute;
+        cursor: pointer;
+        /* visibility: hidden; */
+        /* background: rgba(25, 106, 25, 0.562); */
+    }
+
+    #mandarin {
+        top: 170px;
+        left: 860px;
+        position: absolute;
+        cursor: pointer;
+        /* visibility: hidden; */
+        /* background: rgba(5, 16, 25, 0.562); */
+    }
+
+
+    .dofunction{
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      position: absolute;
+      left: 200px;
+      bottom: 10px;
+      cursor: pointer;
+      visibility: hidden
+}
+
+
+.dostart{
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      position: absolute;
+
+      bottom: 10px;
+      cursor: pointer;
+}
+
+
+
+
+#one{
+    width: 45%;
+    border-right: 2px solid red;
+    height: 600px;
+    float: left;
+    position: absolute;
+    background: rgb(227, 187, 187);
+    /* overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+#one img {
+        /* height: 100%; */
+        width: 70%;
+      }
+
+#two{
+    width: 50%;
+/*    border-right: 2px solid red;*/
+    height: 600px;
+    float: left;
+    background: lightgreen;
+    /* overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+
+</style>
+
+</head>
+<body id="main">
+  <h1 style="text-align:center;">
+    To'rtinchi topshiriq O’simliklar sistematikasining asosiy taksonomik guruhlarini sxemada aks ettiring
+  </h1>
+
+    <div id="one">
+      <img src="images/topshiriq/osimliklar1.png" alt="" >
+    </div>
+
+    <div id="two" >
+      <!-- <div id="olma"><img src="img/osimliklar.png" width="150px"></div> -->
+      <div id="olma"><img src="images/topshiriq/osimliklart41.png" width="150px"></div>
+      <div id="anor"><img src="images/topshiriq/osimliklart43.png" width="150px"></div>
+      <div id="kivi"><img src="images/topshiriq/osimliklart44.png" width="150px"></div>
+      <div id="limon"><img src="images/topshiriq/osimliklart45.png" width="150px"></div>
+      <div id="nok"><img src="images/topshiriq/osimliklart46.png" width="150px"></div>
+      <div id="mandarin"><img src="images/topshiriq/osimliklart47.png" width="150px"></div>
+    </div>
+
+<button type="submit" class="dofunction" onclick="doFunction();" id="dofunction" >Tekshirish</button>
+<button type="submit"class="dostart"  onclick="dostart();" id="dostart" >Boshlash</button>
+
+
+
+   <!-- <div id="item2">t2</div>
+   <div id="item3">t3</div>
+   <div id="item4">t4</div>
+   <div id="item5">t5</div>
+   <div id="item6">t6</div> -->
+
+
+<script type="text/javascript">
+function moveElementDoc(id) { // id is parameter
+
+
+    const element = document.getElementById(id); // we will call our id from html with this parameter
+
+    let heightEl = element.clientHeight / 2; // half height (clientHeight = height of div)
+    let widthEl = element.clientWidth / 2; //half width
+    //we need it, to center our mouse in our div
+    console.log(heightEl);
+    console.log(widthEl);
+    element.addEventListener("mousedown", function() {
+        document.addEventListener("mousemove", movingmouse);
+
+        function movingmouse(e) {
+            element.style.position = "absolute";
+            element.style.left = e.clientX - heightEl + 'px'; // position-div-"id" = positionMoveMouse"x" and "y" like bottom - height"let heightEl"
+            element.style.top = e.clientY - widthEl + 'px';
+
+
+        console.log(e.clientX);
+        console.log(e.clientY);
+
+    }
+    // alert(e.clientX+" "+e.clientY);
+
+        document.addEventListener("mouseup", function() {
+            document.removeEventListener("mousemove", movingmouse)
+        })
+    })
+
+}
+
+
+moveElementDoc("olma"); //Call id in your html and place id in your getelementbyid from the parameter of function
+moveElementDoc("anor");
+moveElementDoc("kivi");
+moveElementDoc("limon");
+moveElementDoc("nok");
+moveElementDoc("mandarin");
+
+
+
+function getActualWidth()
+{
+    var actualWidth = window.innerWidth ||
+                      document.documentElement.clientWidth ||
+                      document.body.clientWidth ||
+                      document.body.offsetWidth;
+
+    return actualWidth;
+}
+
+const w  = window.innerWidth || document.documentElement.clientWidth ||
+document.body.clientWidth;
+const h = window.innerHeight|| document.documentElement.clientHeight||
+document.body.clientHeight;
+
+function dostart(){
+
+// alert(w+" "+h);
+
+            document.getElementById('dostart').style.visibility = 'hidden';
+            document.getElementById('dofunction').style.visibility = 'visible';
+
+
+
+
+//     var img = document.getElementById('olma');
+//     img.style.visibility = 'visible';
+//     var top = Math.floor(Math.random() * (h-200));
+//     var left = Math.floor(Math.random() * (w-200));
+//     //  alert(top+" "+left);
+
+//     while (top>h){
+//         var top = Math.floor(Math.random() * 500);
+//     }
+
+//     while (left>w){
+//         var left = Math.floor(Math.random() * 1200);
+//     }
+
+//     img.style.top=top + "px";
+//     img.style.left=left + "px";
+//     // // alert(h + 150);
+//     // // alert( w + 150);
+
+//     // alert(Math.floor(Math.random() * w)+" "+Math.floor(Math.random() * h) );
+//     // alert();
+
+
+//     var img = document.getElementById('anor');
+//     img.style.visibility = 'visible';
+//     var top = Math.floor(Math.random() * 400);
+//     var left = Math.floor(Math.random() * 1000);
+//     //  alert(top+" "+left);
+//     while (top>h){
+//         var top = Math.floor(Math.random() * 400);
+//     }
+
+//     while (left>w){
+//         var left = Math.floor(Math.random() * 1000);
+//     }
+//     img.style.top=top + "px";
+//     img.style.left=left + "px";
+
+
+
+//     var img = document.getElementById('kivi');
+//     img.style.visibility = 'visible';
+//     var top = Math.floor(Math.random() * 400);
+//     var left = Math.floor(Math.random() * 1000);
+//     //  alert(top+" "+left);
+
+//     while (top>h){
+//         var top = Math.floor(Math.random() * 400);
+//     }
+
+//     while (left>w){
+//         var left = Math.floor(Math.random() * 1000);
+//     }
+
+//     img.style.top=top + "px";
+//     img.style.left=left + "px";
+
+
+
+//     var img = document.getElementById('limon');
+//     img.style.visibility = 'visible';
+//     var top = Math.floor(Math.random() * 400);
+//     var left = Math.floor(Math.random() * 1000);
+//     //  alert(top+" "+left);
+
+//     while (top>h){
+//         var top = Math.floor(Math.random() * 400);
+//     }
+
+//     while (left>w){
+//         var left = Math.floor(Math.random() * 1000);
+//     }
+
+//     img.style.top=top + "px";
+//     img.style.left=left + "px";
+
+
+
+//     var img = document.getElementById('nok');
+//     img.style.visibility = 'visible';
+//     var top = Math.floor(Math.random() * 400);
+//     var left = Math.floor(Math.random() * 1000);
+//     //  alert(top+" "+left);
+
+//     while (top>h){
+//         var top = Math.floor(Math.random() * 400);
+//     }
+
+//     while (left>w){
+//         var left = Math.floor(Math.random() * 1000);
+//     }
+
+//     img.style.top=top + "px";
+//     img.style.left=left + "px";
+
+
+
+
+//     var img = document.getElementById('mandarin');
+//     img.style.visibility = 'visible';
+//     var top = Math.floor(Math.random() * 400);
+//     var left = Math.floor(Math.random() * 1000);
+//     //  alert(top+" "+left);
+
+//     while (top>h){
+//         var top = Math.floor(Math.random() * 400);
+//     }
+
+//     while (left>w){
+//         var left = Math.floor(Math.random() * 1000);
+//     }
+
+//     img.style.top=top + "px";
+//     img.style.left=left + "px";
+
+}
+function doFunction(){
+
+    let one=document.getElementById('one');
+
+   let val1 = document.getElementById('olma');
+   let val2 = document.getElementById('anor');
+   let val3 = document.getElementById('nok');
+   let val5 = document.getElementById('kivi');
+   let val4 = document.getElementById('limon');
+   let val6 = document.getElementById('mandarin');
+
+   var onet1=parseInt(val1.style.top.slice(0, -2));
+   var onel1=parseInt(val1.style.left.slice(0, -2));
+
+   // var right3=cursor.style.top;
+   // var right2=cursor.style.left;
+   var valt1=parseInt(val1.style.top.slice(0, -2));
+   var vall1=parseInt(val1.style.left.slice(0, -2));
+
+   var valt2=parseInt(val2.style.top.slice(0, -2));
+   var vall2=parseInt(val2.style.left.slice(0, -2));
+
+   var valt3=parseInt(val3.style.top.slice(0, -2));
+   var vall3=parseInt(val3.style.left.slice(0, -2));
+
+   var valt4=parseInt(val4.style.top.slice(0, -2));
+   var vall4=parseInt(val4.style.left.slice(0, -2));
+
+   var valt5=parseInt(val5.style.top.slice(0, -2));
+   var vall5=parseInt(val5.style.left.slice(0, -2));
+
+   var valt6=parseInt(val6.style.top.slice(0, -2));
+   var vall6=parseInt(val6.style.left.slice(0, -2));
+
+
+   alert("("+valt1+' '+vall1+")");
+   alert("( w= "+w+' h= '+h+")");
+
+   if ((vall1<w/2)&&(vall2<w/2)&&(vall3<w/2)){
+        alert(w +" topdingiz "+h);
+    }
+}
+
+
+
+</script>
+
+</body>
+</html>

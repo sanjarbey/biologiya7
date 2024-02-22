@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Topshiriq test qilish uchun</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <!-- font wesome stylesheet -->
+
+ <!-- bootstrap core css -->
+
+  <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script> -->
+</head>
+<style>
+
+  body{
+        width: 1200px;
+        height: 500px;
+    }
+
+
+  #mant1,#mant2,#mant3, #mant4, #mant5, #mant6, #mant7, #mant8, #mant9, #mant10,#mant11, #mant12, #mant13, #mant14   {
+        position: absolute;
+        cursor: pointer;
+        width: 300px;
+        height: auto;
+
+    }
+
+
+
+</style>
+
+<body id="main">
+
+
+    <h1>
+      To'rtinchi topshiriq O’simliklar sistematikasining asosiy taksonomik guruhlarini sxemada aks ettiring
+    </h1>
+
+
+
+
+          <img src="images/topshiriq/osimliklar1.png" alt="" width="600px;">
+
+
+
+      <div id="mant9" ><img src="images/topshiriq/osimliklart49.png" width="300px;"></div>
+      <div id="mant10" ><img src="images/topshiriq/osimliklart410.png" width="300px;"></div>
+      <div id="mant11" ><img src="images/topshiriq/osimliklart411.png" width="300px;"></div>
+      <div id="mant1" ><img src="images/topshiriq/osimliklart41.png" width="300px;"></div>
+      <div id="mant2" ><img src="images/topshiriq/osimliklart42.png" width="300px;"></div>
+      <div id="mant5" ><img src="images/topshiriq/osimliklart45.png" width="300px;"></div>
+      <div id="mant12"><img src="images/topshiriq/osimliklart412.png" width="300px;"></div>
+
+
+
+      <div id="mant13" class="text"><img src="images/topshiriq/osimliklart413.png" width="300px;"></div>
+      <div id="mant3" class="text"><img src="images/topshiriq/osimliklart43.png" width="300px;"></div>
+      <div id="mant4" class="text"><img src="images/topshiriq/osimliklart44.png" width="300px;"></div>
+      <div id="mant14" class="text"><img src="images/topshiriq/osimliklart414.png" width="300px;"></div>
+      <div id="mant6" class="text"><img src="images/topshiriq/osimliklart46.png" width="300px;"></div>
+      <div id="mant7" class="text"><img src="images/topshiriq/osimliklart47.png" width="300px;"></div>
+      <div id="mant8" class="text"><img src="images/topshiriq/osimliklart48.png" width="300px;"></div>
+
+
+
+
+
+  <script type="text/javascript">
+
+
+
+        function moveElementDoc(id) {
+                const element = document.getElementById(id);
+                element.addEventListener("mousedown", function() {
+                    document.addEventListener("mousemove", movingmouse);
+                    function movingmouse(e) {
+                        element.style.position = "absolute";
+                        element.style.left = e.clientX - heightEl + 'px';
+                        element.style.top = e.clientY - widthEl + 'px';
+                }
+                    document.addEventListener("mouseup", function() {
+                        document.removeEventListener("mousemove", movingmouse)
+                    })
+                })
+
+                }
+
+
+                moveElementDoc("mant1");
+                moveElementDoc("mant2");
+                moveElementDoc("mant3");
+                moveElementDoc("mant4");
+                moveElementDoc("mant5");
+                moveElementDoc("mant6");
+                moveElementDoc("mant7");
+                moveElementDoc("mant8");
+                moveElementDoc("mant9");
+                moveElementDoc("mant11");
+                moveElementDoc("mant12");
+                moveElementDoc("mant13");
+                moveElementDoc("mant14");
+      </script>
+
+
+</body>
+</html>
