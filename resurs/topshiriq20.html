@@ -49,16 +49,7 @@
     font-weight: 600;
   }
 
-  .text2{
-    width: auto;
-    /* height: 40px; */
-     border: 3px solid darkblue;
-    border-radius: 15px;
-    padding: 5px;
-    margin: 5px;
-    cursor: pointer;
-    display: block;
-  }
+
 </style>
 
 </head>
@@ -146,24 +137,26 @@
           <div class="row">
             <div class="col-md-3">
                   <img src="images/topshiriq/topshiriq20_1.jpg" alt="">
-                  <div class="input-group input-group-lg m-1">
+
+                  <div class="input-group input-group-lg m-1" id="answ1">
                     <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroup-sizing-lg5">A</span>
+                      <span class="input-group-text" id="inputGroup1">A</span>
                     </div>
-                    <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                    <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" id="first">
                   </div>
             </div>
             <div class="col-md-3">
                   <img src="images/topshiriq/topshiriq20_2.jpg" alt="">
-                  <div class="input-group input-group-lg m-1">
+
+                  <div class="input-group input-group-lg m-1" id="answ2">
                     <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroup-sizing-lg5">B</span>
+                      <span class="input-group-text" id="inputGroup2">B</span>
                     </div>
-                    <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                    <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" id="second">
                   </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6" id="matn">
               <div id="mant9" class="text1">1.	Ayirish sistemasi bir juft tana buyraklardan boshlanadi.</div>
               <div id="mant10" class="text1">2.	Siydik siydik yo'llari orqali qovuqqa o’tadi.</div>
               <div id="mant11" class="text1">3.	Siydik siydik yo'llari orqali o'tib, qovuqda to'planadi.</div>
@@ -176,7 +169,7 @@
           </div>
 
 
-  <button class="btn btn-success mt-4 pr-3"> Tekshirish </button>
+  <button class="btn btn-success mt-4 pr-3" onclick="checkvalue()" id="btn"> Tekshirish </button>
 </section>
 
 
@@ -290,65 +283,107 @@
 
   <script>
 
-// function getActualWidth()
-// {
-//     var actualWidth = window.innerWidth ||
-//                       document.documentElement.clientWidth ||
-//                       document.body.clientWidth ||
-//                       document.body.offsetWidth;
+    var f,s;
 
-//     return actualWidth;
-// }
+    // function onload(){
+    //   f=document.getElementById('first');
+    //   s=document.getElementById('second');
+    // }
 
-// const w  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-// const h = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+    function checkvalue(){
 
-    function moveElementDoc(id) { // id is parameter
-
-
-            const element = document.getElementById(id); // we will call our id from html with this parameter
-
-            // let heightEl = element.clientHeight / 2; // half height (clientHeight = height of div)
-            // let widthEl = element.clientWidth / 2; //half width
-            // //we need it, to center our mouse in our div
-            // console.log(heightEl);
-            // console.log(widthEl);
-            element.addEventListener("mousedown", function() {
-                document.addEventListener("mousemove", movingmouse);
-
-                function movingmouse(e) {
-                    element.style.position = "absolute";
-                    element.style.left = e.clientX - heightEl + 'px'; // position-div-"id" = positionMoveMouse"x" and "y" like bottom - height"let heightEl"
-                    element.style.top = e.clientY - widthEl + 'px';
+      f=document.getElementById('first');
+      s=document.getElementById('second');
+      // alert(f.value);
+      fb=false;
+      sb=false;
 
 
-                // console.log(e.clientX);
-                // console.log(e.clientY);
+      function sumLetters(str) {
+            let sum = 0;
+            let splitStr = str.split(',');
 
-            }
-            // alert(e.clientX+" "+e.clientY);
-
-                document.addEventListener("mouseup", function() {
-                    document.removeEventListener("mousemove", movingmouse)
-                })
-            })
-
+            for (let i = 0; i < splitStr.length; i++) {
+                sum += parseInt(splitStr[i])
             }
 
+            return sum;
+        };
 
-            // moveElementDoc("mant1");
-            // moveElementDoc("mant2");
-            // moveElementDoc("mant3");
-            // moveElementDoc("mant4");
-            // moveElementDoc("mant5");
-            // moveElementDoc("mant6");
-            // moveElementDoc("mant7");
-            // moveElementDoc("mant8");
-            // moveElementDoc("mant9");
-            // moveElementDoc("mant11");
-            // moveElementDoc("mant12");
-            // moveElementDoc("mant13");
-            // moveElementDoc("mant14");
+        var bsum=sumLetters(f.value);
+
+
+      if (bsum==8){
+        fb=true;}
+
+        if(fb){
+          document.getElementById('answ1').disabled=true;
+            document.getElementById('answ1').classList.add("btn-success");
+
+
+
+
+          document.getElementById('inputGroup1').disabled=true;
+          document.getElementById('inputGroup1').style.color = 'white';
+          document.getElementById('inputGroup1').style.fontWeight = '900';
+          document.getElementById('inputGroup1').style.backgroundColor = 'green';
+        }
+        else{
+          document.getElementById('inputGroup1').classList.add("btn-danger");
+          document.getElementById('inputGroup1').disabled=true;
+
+          document.getElementById('inputGroup1').style.color = 'red';
+          document.getElementById('inputGroup1').style.fontWeight = '900';
+          document.getElementById('inputGroup1').style.backgroundColor = 'yellow';
+        }
+
+
+
+
+
+
+
+        var ssum=sumLetters(s.value);
+
+
+
+      if (ssum==13){
+        sb=true;
+      }
+
+      if(sb){
+          document.getElementById('answ2').disabled=true;
+          document.getElementById('answ2').classList.add("btn-success");
+
+          document.getElementById('inputGroup2').disabled=true;
+          document.getElementById('inputGroup2').style.color = 'white';
+          document.getElementById('inputGroup2').style.fontWeight = '900';
+          document.getElementById('inputGroup2').style.backgroundColor = 'green';
+        }
+        else{
+          document.getElementById('inputGroup2').classList.add("btn-danger");
+          document.getElementById('inputGroup2').disabled=true;
+          document.getElementById('inputGroup2').style.color = 'red';
+          document.getElementById('inputGroup2').style.fontWeight = '900';
+          document.getElementById('inputGroup2').style.backgroundColor = 'yellow';
+        }
+
+        if (fb&&sb){
+          document.getElementById('matn').style.color = 'green';
+        }
+        else{
+          document.getElementById('matn').style.color = 'red';
+        }
+
+
+        document.getElementById('btn').disabled=true;
+
+
+
+
+
+
+    }
   </script>
 
 
