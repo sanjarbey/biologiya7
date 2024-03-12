@@ -36,12 +36,12 @@
 
   <link rel="stylesheet" href="css/css-circular-prog-bar.css">
 <style>
-  .text1{
+  #matn1, #matn2, #matn3, #matn4, #matn5{
     width: auto;
     /* height: 40px; */
-     border: 3px solid darkblue;
-    border-radius: 15px;
-    padding: 5px;
+     border: 1px solid darkblue;
+    border-radius: 5px;
+    padding: 8px;
     margin: 5px;
     cursor: pointer;
     display: block;
@@ -116,14 +116,17 @@
     <section class="admission_section">
       <div class="container">
 
-          <div class="row">
+          <div class="row text-center">
 
-            <h1 class="col text-center">
-              Reproduksiya, o’sish va rivojlanish. Hayvonlarning individual ko’payishi
-            </h1>
-            <h2>Hayvonlar postembriogenez rivojlanish bosqichlarida tushirib qoldirilgan so’zlarni to’g’ri joylashtiring.<br>
-              <b>Voyaga yetgandavr, To’liq, To’g’ri, Chala, Keksaygan davr </b>
-              . </h2>
+            <h1 >
+             Hayvonlarning individual ko’payishi <br>
+
+            Hayvonlar postembriogenez rivojlanish bosqichlarida tushirib qoldirilgan so’zlarni to’g’ri joylashtiring.</h1>
+              <div id="matn1"> Voyaga yetgandavr</div>
+              <div id="matn2">To’liq</div>
+              <div id="matn3">To’g’ri</div>
+              <div id="matn4">Chala</div>
+              <div id="matn5">Keksaygan davr</div>
           </div>
 
 
@@ -267,8 +270,8 @@
 
             const element = document.getElementById(id); // we will call our id from html with this parameter
 
-            // let heightEl = element.clientHeight / 2; // half height (clientHeight = height of div)
-            // let widthEl = element.clientWidth / 2; //half width
+            let heightEl = element.clientHeight / 2; // half height (clientHeight = height of div)
+            let widthEl = element.clientWidth / 2; //half width
             // //we need it, to center our mouse in our div
             // console.log(heightEl);
             // console.log(widthEl);
@@ -295,11 +298,11 @@
             }
 
 
-            // moveElementDoc("mant1");
-            // moveElementDoc("mant2");
-            // moveElementDoc("mant3");
-            // moveElementDoc("mant4");
-            // moveElementDoc("mant5");
+            moveElementDoc("mant1");
+            moveElementDoc("mant2");
+            moveElementDoc("mant3");
+            moveElementDoc("mant4");
+            moveElementDoc("mant5");
             // moveElementDoc("mant6");
             // moveElementDoc("mant7");
             // moveElementDoc("mant8");
