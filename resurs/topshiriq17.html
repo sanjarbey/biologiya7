@@ -36,28 +36,25 @@
 
   <link rel="stylesheet" href="css/css-circular-prog-bar.css">
 <style>
-  .text1{
-    width: auto;
-    /* height: 40px; */
-     border: 3px solid darkblue;
-    border-radius: 15px;
-    padding: 5px;
-    margin: 5px;
-    cursor: pointer;
-    display: block;
-    float: left;
-  }
 
-  .text2{
-    width: auto;
-    height: 40px;
+  .text1{
+     width: 200px;
+     height: 80px;
      border: 3px solid darkblue;
-    border-radius: 15px;
-    padding: 5px;
-    margin: 5px;
-    cursor: pointer;
-    display: block;
-  }
+     background-color: rgb(85, 103, 244);
+     border-radius: 15px;
+     padding: 5px;
+     margin: 5px;
+     cursor: pointer;
+     /* display: block; */
+     float: left;
+     font-weight: 900;
+     font-size: 24px;
+     text-align: center;
+     color: aliceblue;
+   }
+
+
 </style>
 
 </head>
@@ -126,17 +123,6 @@
           </div>
 
 
-
-          <!-- Qoplovchi to'qima
-          Nerv to'qima
-          Asosiy to'qima
-          O'tkazuvchi to'qima
-          Muskul to'qima
-          Mexanik to'qima
-          Biriktiruvchi to'qima
-          Hosil qiluvchi to'qima
-          Epiteiiy to'qima
-          Ajratnvchi to'qima -->
           <div class="row">
 
             <div id="nerv1" class="col" ><img src="images/topshiriq/topshiriq18_1.jpg"></div>
@@ -147,10 +133,10 @@
           </div>
 
           <div class="row">
-            <div class="col">oddiy shingil karam turp </div>
-            <div class="col">oddiy soyabon  osh piyoz</div>
-            <div class="col">oddiy qalqoncha gilos nok</div>
-            <div class="col">so’ta makkajo'xori</div>
+            <div class="col text1" id="matn1">oddiy shingil karam turp </div>
+            <div class="col text1" id="matn2">oddiy soyabon  osh piyoz</div>
+            <div class="col text1" id="matn3">oddiy qalqoncha gilos nok</div>
+            <div class="col text1" id="matn4">so’ta makkajo'xori</div>
           </div>
 
 
@@ -266,67 +252,53 @@
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
 
-  <script>
-
-// function getActualWidth()
-// {
-//     var actualWidth = window.innerWidth ||
-//                       document.documentElement.clientWidth ||
-//                       document.body.clientWidth ||
-//                       document.body.offsetWidth;
-
-//     return actualWidth;
-// }
-
-// const w  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-// const h = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
-
-    function moveElementDoc(id) { // id is parameter
 
 
-            const element = document.getElementById(id); // we will call our id from html with this parameter
+<script type="text/javascript">
 
-            // let heightEl = element.clientHeight / 2; // half height (clientHeight = height of div)
-            // let widthEl = element.clientWidth / 2; //half width
-            // //we need it, to center our mouse in our div
-            // console.log(heightEl);
-            // console.log(widthEl);
-            element.addEventListener("mousedown", function() {
-                document.addEventListener("mousemove", movingmouse);
+        function moveElementDoc(id) { // id is parameter
+          const element = document.getElementById(id); // we will call our id from html with this parameter
 
-                function movingmouse(e) {
-                    element.style.position = "absolute";
-                    element.style.left = e.clientX - heightEl + 'px'; // position-div-"id" = positionMoveMouse"x" and "y" like bottom - height"let heightEl"
-                    element.style.top = e.clientY - widthEl + 'px';
+          let heightEl = element.clientHeight / 2; // half height (clientHeight = height of div)
+          let widthEl = element.clientWidth / 2; //half width
+          //we need it, to center our mouse in our div
 
+          element.addEventListener("mousedown", function() {
+              document.addEventListener("mousemove", movingmouse);
 
-                // console.log(e.clientX);
-                // console.log(e.clientY);
+              function movingmouse(e) {
+                  element.style.position = "absolute";
+                  element.style.left = e.clientX - heightEl + 'px'; // position-div-"id" = positionMoveMouse"x" and "y" like bottom - height"let heightEl"
+                  element.style.top = e.clientY - widthEl + 'px';
 
-            }
-            // alert(e.clientX+" "+e.clientY);
+              }
 
-                document.addEventListener("mouseup", function() {
-                    document.removeEventListener("mousemove", movingmouse)
-                })
-            })
-
-            }
+              document.addEventListener("mouseup", function() {
+                  document.removeEventListener("mousemove", movingmouse)
+              })
+          })
+          }
 
 
-            // moveElementDoc("mant1");
-            // moveElementDoc("mant2");
-            // moveElementDoc("mant3");
-            // moveElementDoc("mant4");
-            // moveElementDoc("mant5");
-            // moveElementDoc("mant6");
-            // moveElementDoc("mant7");
-            // moveElementDoc("mant8");
-            // moveElementDoc("mant9");
-            // moveElementDoc("mant11");
-            // moveElementDoc("mant12");
-            // moveElementDoc("mant13");
-            // moveElementDoc("mant14");
+          moveElementDoc("item1");
+          moveElementDoc("item2");
+          moveElementDoc("item3");
+          moveElementDoc("item4");
+          // moveElementDoc("item5");
+          // moveElementDoc("item6");
+          // moveElementDoc("item7");
+
+
+          // moveElementDoc("item8");
+          // moveElementDoc("item9");
+          // moveElementDoc("item10");
+          // moveElementDoc("item11");
+          // moveElementDoc("item12");
+          // moveElementDoc("item13");
+          // moveElementDoc("item14");
+
+
+
   </script>
 
 
