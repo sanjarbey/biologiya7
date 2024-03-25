@@ -34,117 +34,81 @@
 
         <style type="text/css">
 
+          body{
+            margin: 20px;
+          }
+
 /*Siydik pufagi*/
-            #item{
-/*                display: block;*/
-                height: 50px;
-                width: 150px;
-                top: 450px;
-                left: 270px;
-                position: absolute;
-                vertical-align: middle;
-                line-height: 50px;
-                text-align: center;
+            #item1{
+                top: 150px;
+                left: 900px;
                 background: rgba(66, 91, 239, 0.8);
-                font-weight: 900;
-                font-size: 18px;
-                cursor: pointer;
-
-
-            }
+               }
 
 /*            Buyrak*/
 
-            #item1 {
-/*                display: block;*/
-                height: 50px;
-                width: 150px;
-                top: 710px;
-                left:270px;
-                position: absolute;
-                vertical-align: middle;
-                line-height: 50px;
-                text-align: center;
+            /* #item2 {
+                 top: 150px;
+                left: 1200px;
                 background: rgba(110, 66, 239, 0.8);
-                font-weight: 900;
-                font-size: 18px;
-                cursor: pointer;
 
 
-            }
+            } */
 
 /*Arteriya tomirlari*/
-            #item2{
-/*                display: block;*/
-                height: 50px;
-                width: 150px;
-                top: 550px;
-                left: 270px;
-                position: absolute;
-                vertical-align: middle;
-                line-height: 50px;
-                text-align: center;
+            #item3{
+              top: 150px;
+                left: 1200px;
+                /* line-height: 20px; */
                 background: rgba(245, 40, 145, 0.8);
-                font-weight: 900;
-                font-size: 18px;
-                cursor: pointer;
-
 
             }
 
 /*Buyrak usti bezi*/
 
-             #item3  {
-/*                display: block;*/
-                height: 50px;
-                width: 150px;
-                top: 350px;
-                left: 270px;
-                position: absolute;
-                vertical-align: middle;
-                line-height: 50px;
-                text-align: center;
+             #item4  {
+              top: 150px;
+                left: 610px;
                 background: rgba(11, 158, 191, 0.9);
-                font-weight: 900;
-                font-size: 18px;
-                cursor: pointer;
-
 
             }
 
 
 /*Siydik yo'li*/
-            #item4 {
-/*                display: block;*/
-                height: 50px;
-                width: 150px;
-                top: 630px;
-                left: 270px;
-                position: absolute;
-                vertical-align: middle;
-                line-height: 50px;
-                text-align: center;
+            #item5 {
+                top: 250px;
+                left: 900px;
                 background: rgba(232, 90, 52, 0.9);
-                font-weight: 900;
-                font-size: 18px;
-                cursor: pointer;
-
 
             }
 
 
 /*Vena tomirlari*/
-            #item5  {
+            #item6  {
+                top: 250px;
+                left: 1200px;
+                background: rgba(252, 244, 17, 0.9);
+
+            }
+
+            #item7  {
+                top: 250px;
+                left: 610px;
+                background: rgba(203, 78, 231, 0.9);
+
+            }
+
+
+            /*Vena tomirlari*/
+            #item1,#item2,#item3,#item4,#item5,#item6,#item7  {
 /*                display: block;*/
-                height: 50px;
-                width: 150px;
-                top: 280px;
-                left:270px;
+                height: 60px;
+                width: 200px;
+                /* top: 800px;
+                left:270px; */
                 position: absolute;
                 vertical-align: middle;
-                line-height: 50px;
-                text-align: center;
-                background: rgba(202, 125, 17, 0.9);
+                line-height: 30px;
                 font-weight: 900;
                 font-size: 18px;
                 cursor: pointer;
@@ -153,16 +117,76 @@
             }
 
 
+
+            #item8, #item9, #item10, #item11, #item12, #item13, #item14  {
+                height: 60px;
+                width: 200px;
+                position: absolute;
+                vertical-align: middle;
+                line-height: 30px;
+                text-align: center;
+                font-weight: 900;
+                font-size: 18px;
+                cursor: pointer;
+                /* display: block; */
+  /* justify-content: center; */
+}
+
+              #item8 {
+
+                top: 350px;
+                left: 610px;
+                background: rgba(202, 125, 17, 0.9);
+}
+
+              #item9 {
+                top: 350px;
+                left: 1200px;
+                background: rgba(98, 136, 240, 0.9);
+}
+
+
+
+              #item11 {
+                top: 350px;
+                left: 900px;
+                background: rgba(205, 81, 182, 0.9);
+}
+
+
+
+              #item12 {
+                top: 450px;
+                left: 900px;
+                background: rgba(232, 27, 30, 0.9);
+}
+
+
+              #item13 {
+                top: 450px;
+                left: 610px;
+                background: rgba(79, 54, 240, 0.9);
+}
+
+
+              #item14 {
+                top: 450px;
+                left: 1200px;
+                background: rgba(158, 7, 95, 0.9);
+}
+
+
+
              .flex-container {
                   display: flex;
                   flex-direction: column;
-                  text-align: center;
+                  /* text-align: center; */
 
 
 /*                  background-color: DodgerBlue;*/
                 }
 
-                td > div {
+                .flex-container > div {
                   background-color: #f5f155;
                   width: 50px;
                   height: 50px;
@@ -170,7 +194,8 @@
                   text-align: center;
                   line-height: 45px;
                   font-size: 30px;
-                  left: 100px;
+                  /* left: 100px; */
+                  border-radius: 20px;
                 }
 
 
@@ -193,29 +218,6 @@
                 cursor: pointer;
 
                 }
-
-
-                 table {
-                    border-spacing: 0px;
-                    margin-left: 100px;
-                    display: inline-block;
-                  }
-                  table,
-                  td,
-                  th {
-                    /* border: 1px solid rgb(170, 243, 170); */
-                    border-collapse: separate;
-                  }
-                  td,
-                  th {
-                    padding: 10px;
-                  }
-                  img{
-                    width: 100%;
-                    /* left: 500px; */
-                    display: inline-block;
-                  }
-
 
         </style>
 
@@ -274,58 +276,51 @@
           <div class="row">
 
             <h1 class="col text-center">
-              Odamning ayirish organlari  rasmida berilgan sonlar va organ nomlarini muvofiqlashtiring.
+              O’simliklar sistematikasining asosiy taksonomik guruhlarini sxemada aks ettiring.
             </h1>
             <!-- <h2>Odamning ayirish organlari  rasmida berilgan sonlar va organ nomlarini muvofiqlashtiring. </h2> -->
           </div>
+
+<div>
+  <img src="images/topshiriq/osimliklar.png" >
+</div>
 <section class="about_section">
-        <table>
-            <tr>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-            </tr>
+  <div class="flex-container">
 
-            <tr>
-                <td rowspan="6"><img src="images/topshiriq/topshiriq21_1.jpg"></td>
-                <td><div id="div1">1</div></td>
-                <td><div id="item5">Vena tomirlari</div></td>
 
-            </tr>
-            <tr>
 
-                <td><div id="div2">2</div></td>
-                <td><div id="item">Siydik pufagi</div></td>
 
-            </tr>
-            <tr>
 
-                <td><div id="div3">3</div></td>
-                <td>
-                        <div id="item1">Buyrak</div></td>
-            </tr>
-            <tr>
 
-                <td><div id="div4">4</div></td>
-                <td>
-                        <div id="item2">Arteriya tomirlari</div></td>
-            </tr>
 
-            <tr>
+      <div id="item8">Ra'nodoshlar oilasi</div>
+      <div id="item9">Bug'doydoshlar oilasi</div>
+      <!-- <div id="item10">Na'matak turkumi</div> -->
+      <div id="item11">Na'matak</div>
+      <div id="item12">Bug'doy</div>
+      <div id="item13">Oddiy na'matak</div>
+      <div id="item14">Yumshoq bug'doy</div>
 
-                <td><div id="div5">5</div></td>
-                <td>
-                        <div id="item3">Buyrak usti bezi</div></td>
-            </tr>
 
-            <tr>
 
-                <td><div id="div6">6</div></td>
-                <td>
-                        <div id="item4">Siydik yo’li</div></td>
-            </tr>
+      <div id="item1">O'simliklar dunyosi</div>
+      <!-- <div id="item2">Ingnabargli o'simliklar bo'limii</div> -->
+      <div id="item3">Gulli o'simliklar bo'limi</div>
+      <div id="item4">Ikki urug'oallali o'simliklar sinfi</div>
+      <div id="item5">Bir urug'pallali o'simliklar sinfi.</div>
+      <div id="item6">Ra'nogullilar tartini</div>
+      <div id="item7">Bug'boygullilar tartibi</div>
 
-        </table>
+
+
+
+
+
+
+
+  </div>
+
+
 
         <button class="bott" onclick="check_position()" id="mybutton">Tekshirish</button>
 
@@ -426,21 +421,8 @@
       <!-- footer section -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <script type="text/javascript">
+
                function moveElementDoc(id) { // id is parameter
 
 
@@ -467,233 +449,223 @@
             }
 
 
-            moveElementDoc("item"); //Call id in your html and place id in your getelementbyid from the parameter of function
             moveElementDoc("item1");
-            moveElementDoc("item2");
+            // moveElementDoc("item2");
             moveElementDoc("item3");
             moveElementDoc("item4");
             moveElementDoc("item5");
+            moveElementDoc("item6");
+            moveElementDoc("item7");
+
+
+            moveElementDoc("item8");
+            moveElementDoc("item9");
+            // moveElementDoc("item10");
+            moveElementDoc("item11");
+            moveElementDoc("item12");
+            moveElementDoc("item13");
+            moveElementDoc("item14");
 
 var count=0;
             function check_position() {
-
-
-                    var item = document.getElementById('item');
-                    var rect = item.getBoundingClientRect();
-                    var topPosition = rect.top;
-
-                    var div1 = document.getElementById('div1');
-                    var div1rect = div1.getBoundingClientRect();
-                    var div1topPosition = div1rect.top;
+              // alert("ASSALOM");
 
 
                     var item1 = document.getElementById('item1');
                     var rect1 = item1.getBoundingClientRect();
                     var topPosition1 = rect1.top;
 
-                    var div2 = document.getElementById('div2');
-                    var div2rect = div2.getBoundingClientRect();
-                    var div2topPosition = div2rect.top;
-
-
-
-
-                    var item2 = document.getElementById('item2');
-                    var rect2 = item2.getBoundingClientRect();
-                    var topPosition2 = rect2.top;
-
-                    var div3 = document.getElementById('div3');
-                    var div3rect = div3.getBoundingClientRect();
-                    var div3topPosition = div3rect.top;
-
-
-
-
                     var item3 = document.getElementById('item3');
                     var rect3 = item3.getBoundingClientRect();
                     var topPosition3 = rect3.top;
+                    // alert(topPosition1);
+                    // alert(topPosition3);
 
-                    var div4 = document.getElementById('div4');
-                    var div4rect = div4.getBoundingClientRect();
-                    var div4topPosition = div4rect.top;
+                    if (topPosition1<topPosition3) {
 
+                         document.getElementById('item1').disabled=true;
+                         document.getElementById('item1').style.backgroundColor = 'green';
+                         document.getElementById('item1').style.border = '4px solid red';
+                       }
+                    else{
+
+                          document.getElementById('item1').disabled=true;
+                         document.getElementById('item1').style.backgroundColor = 'red';
+                         document.getElementById('item1').style.border = '4px solid green';
+
+                    }
 
 
                     var item4 = document.getElementById('item4');
                     var rect4 = item4.getBoundingClientRect();
                     var topPosition4 = rect4.top;
 
-                    var div5 = document.getElementById('div5');
-                    var div5rect = div5.getBoundingClientRect();
-                    var div5topPosition = div5rect.top;
-
-
-
                     var item5 = document.getElementById('item5');
                     var rect5 = item5.getBoundingClientRect();
                     var topPosition5 = rect5.top;
 
 
-                    var div6 = document.getElementById('div6');
-                    var div6rect = div6.getBoundingClientRect();
-                    var div6topPosition = div6rect.top;
+                    if(topPosition3<topPosition4&&topPosition3<topPosition5){
 
-                    // alert( " \n item  ="+topPosition+" \n item1 ="+topPosition1+" \n item2 ="+topPosition2+" \n item3 ="+topPosition3+" \n item4 ="+topPosition4+" \n item5 ="+topPosition5);
+                          document.getElementById('item3').disabled=true;
+                          document.getElementById('item3').style.backgroundColor = 'green';
+                          document.getElementById('item3').style.border = '4px solid red';
 
-                    // alert((div1topPosition));
-                    // alert((topPosition));
+                          document.getElementById('item4').disabled=true;
+                          document.getElementById('item4').style.backgroundColor = 'green';
+                          document.getElementById('item4').style.border = '4px solid red';
 
-                    // var result = Math.abs(div1topPosition-topPosition);
-                    // alert(result)
-                    //
-                    var result1=result2=result3=result4=result5=result6= false;
+                          document.getElementById('item5').disabled=true;
+                          document.getElementById('item5').style.backgroundColor = 'green';
+                          document.getElementById('item5').style.border = '4px solid red';
+
+                    }
+
+                    else{
+
+                      document.getElementById('item3').disabled=true;
+                      document.getElementById('item3').style.backgroundColor = 'red';
+                      document.getElementById('item3').style.border = '4px solid green';
+
+                      document.getElementById('item4').disabled=true;
+                      document.getElementById('item4').style.backgroundColor = 'red';
+                      document.getElementById('item4').style.border = '4px solid green';
+
+                      document.getElementById('item5').disabled=true;
+                      document.getElementById('item5').style.backgroundColor = 'red';
+                      document.getElementById('item5').style.border = '4px solid green';
+
+                                          }
 
 
 
-                    if (Math.abs(div1topPosition-topPosition3)<10) {
-                        // alert("uraaaaa !"+topPosition+"uraaaaa !"+div1topPosition);
 
-                         document.getElementById('item3').disabled=true;
-                         document.getElementById('div1').disabled=true;
+                    var item6 = document.getElementById('item6');
+                    var rect6 = item6.getBoundingClientRect();
+                    var topPosition6 = rect6.top;
 
-                         document.getElementById('item3').style.backgroundColor = 'green';
-                         document.getElementById('item3').style.border = '2px solid red';
-                        document.getElementById('div1').style.backgroundColor = 'green';
-                        document.getElementById('div1').style.border = '2px solid red';
-                        // result1=true;
+                    var item7 = document.getElementById('item7');
+                    var rect7 = item7.getBoundingClientRect();
+                    var topPosition7 = rect7.top;
 
 
-                    } else {
-                        document.getElementById('item3').disabled=true;
-                         document.getElementById('div1').disabled=true;
 
-                         document.getElementById('item3').style.backgroundColor = 'red';
-                         document.getElementById('item3').style.border = '2px solid yellow';
-                        document.getElementById('div1').style.backgroundColor = 'red';
-                        document.getElementById('div1').style.border = '2px solid yellow';
+                    if(topPosition5<topPosition6&&topPosition5<topPosition7){
+
+                            document.getElementById('item6').disabled=true;
+                            document.getElementById('item6').style.backgroundColor = 'green';
+                            document.getElementById('item6').style.border = '4px solid red';
+
+                            document.getElementById('item7').disabled=true;
+                            document.getElementById('item7').style.backgroundColor = 'green';
+                            document.getElementById('item7').style.border = '4px solid red';
+                    }
+
+                    else{
+
+                          document.getElementById('item6').disabled=true;
+                          document.getElementById('item6').style.backgroundColor = 'red';
+                          document.getElementById('item6').style.border = '4px solid green';
+
+                          document.getElementById('item7').disabled=true;
+                          document.getElementById('item7').style.backgroundColor = 'red';
+                          document.getElementById('item7').style.border = '4px solid green';
                     }
 
 
 
 
+                    var div8 = document.getElementById('item8');
+                    var div8rect = div8.getBoundingClientRect();
+                    var topPosition8 = div8rect.top;
 
-                    if (Math.abs(div2topPosition-topPosition1)<10) {
-                        // alert("uraaaaa !"+topPosition+"uraaaaa !"+div1topPosition);
+                    var div9 = document.getElementById('item9');
+                    var div9rect = div9.getBoundingClientRect();
+                    var topPosition9 = div9rect.top;
 
-                         document.getElementById('item1').disabled=true;
-                         document.getElementById('div2').disabled=true;
+                    if(topPosition7<topPosition8&&topPosition7<topPosition8){
 
-                         document.getElementById('item1').style.backgroundColor = 'green';
-                         document.getElementById('item1').style.border = '2px solid red';
-                        document.getElementById('div2').style.backgroundColor = 'green';
-                        document.getElementById('div2').style.border = '2px solid red';
-                        result2=true;
+                        document.getElementById('item8').disabled=true;
+                        document.getElementById('item8').style.backgroundColor = 'green';
+                        document.getElementById('item8').style.border = '4px solid red';
 
-
-                    } else {
-                        document.getElementById('item1').disabled=true;
-                         document.getElementById('div2').disabled=true;
-
-                         document.getElementById('item1').style.backgroundColor = 'red';
-                         document.getElementById('item1').style.border = '2px solid yellow';
-                        document.getElementById('div2').style.backgroundColor = 'red';
-                        document.getElementById('div2').style.border = '2px solid yellow';
+                        document.getElementById('item9').disabled=true;
+                        document.getElementById('item9').style.backgroundColor = 'green';
+                        document.getElementById('item9').style.border = '4px solid red';
                     }
 
+                    else{
 
-                     if (Math.abs(div3topPosition-topPosition5)<10) {
-                        // alert("uraaaaa !"+topPosition+"uraaaaa !"+div1topPosition);
+                        document.getElementById('item8').disabled=true;
+                        document.getElementById('item8').style.backgroundColor = 'red';
+                        document.getElementById('item8').style.border = '4px solid green';
 
-                         document.getElementById('item5').disabled=true;
-                         document.getElementById('div3').disabled=true;
-
-                         document.getElementById('item5').style.backgroundColor = 'green';
-                         document.getElementById('item5').style.border = '2px solid red';
-                        document.getElementById('div3').style.backgroundColor = 'green';
-                        document.getElementById('div3').style.border = '2px solid red';
-                        result3=true;
-
-
-                    } else {
-                        document.getElementById('item5').disabled=true;
-                         document.getElementById('div3').disabled=true;
-
-                         document.getElementById('item5').style.backgroundColor = 'red';
-                         document.getElementById('item5').style.border = '2px solid yellow';
-                        document.getElementById('div3').style.backgroundColor = 'red';
-                        document.getElementById('div3').style.border = '2px solid yellow';
+                        document.getElementById('item9').disabled=true;
+                        document.getElementById('item9').style.backgroundColor = 'red';
+                        document.getElementById('item9').style.border = '4px solid green';
                     }
 
 
 
-                     if (Math.abs(div4topPosition-topPosition)<10) {
-                        // alert("uraaaaa !"+topPosition+"uraaaaa !"+div1topPosition);
+                    var div11 = document.getElementById('item11');
+                    var div11rect = div11.getBoundingClientRect();
+                    var topPosition11 = div11rect.top;
 
-                         document.getElementById('item').disabled=true;
-                         document.getElementById('div4').disabled=true;
-
-                         document.getElementById('item').style.backgroundColor = 'green';
-                         document.getElementById('item').style.border = '2px solid red';
-                        document.getElementById('div4').style.backgroundColor = 'green';
-                        document.getElementById('div4').style.border = '2px solid red';
-                        result4=true;
+                    var div12 = document.getElementById('item12');
+                    var div12rect = div12.getBoundingClientRect();
+                    var topPosition12 = div12rect.top;
 
 
-                    } else {
-                        document.getElementById('item').disabled=true;
-                         document.getElementById('div4').disabled=true;
+                    if(topPosition9<topPosition11&&topPosition9<topPosition12){
 
-                         document.getElementById('item').style.backgroundColor = 'red';
-                         document.getElementById('item').style.border = '2px solid yellow';
-                        document.getElementById('div4').style.backgroundColor = 'red';
-                        document.getElementById('div4').style.border = '2px solid yellow';
+                          document.getElementById('item11').disabled=true;
+                          document.getElementById('item11').style.backgroundColor = 'green';
+                          document.getElementById('item11').style.border = '4px solid red';
+
+                          document.getElementById('item12').disabled=true;
+                          document.getElementById('item12').style.backgroundColor = 'green';
+                          document.getElementById('item12').style.border = '4px solid red';
+                      }
+                      else{
+                          document.getElementById('item11').disabled=true;
+                          document.getElementById('item11').style.backgroundColor = 'red';
+                          document.getElementById('item11').style.border = '4px solid green';
+
+                          document.getElementById('item12').disabled=true;
+                          document.getElementById('item12').style.backgroundColor = 'red';
+                          document.getElementById('item12').style.border = '4px solid green';
+
+                      }
+
+
+                    var div13 = document.getElementById('item13');
+                    var div13rect = div13.getBoundingClientRect();
+                    var topPosition13 = div13rect.top;
+
+                    var div14 = document.getElementById('item14');
+                    var div14rect = div14.getBoundingClientRect();
+                    var topPosition14 = div14rect.top;
+
+                    if(topPosition11<topPosition14&&topPosition11<topPosition13){
+
+                        document.getElementById('item13').disabled=true;
+                        document.getElementById('item13').style.backgroundColor = 'green';
+                        document.getElementById('item13').style.border = '4px solid red';
+
+                        document.getElementById('item14').disabled=true;
+                        document.getElementById('item14').style.backgroundColor = 'green';
+                        document.getElementById('item14').style.border = '4px solid red';
                     }
+                    else{
 
+                        document.getElementById('item13').disabled=true;
+                        document.getElementById('item13').style.backgroundColor = 'red';
+                        document.getElementById('item13').style.border = '4px solid green';
 
-                    if (Math.abs(div5topPosition-topPosition2)<10) {
-                        // alert("uraaaaa !"+topPosition+"uraaaaa !"+div1topPosition);
+                        document.getElementById('item14').disabled=true;
+                        document.getElementById('item14').style.backgroundColor = 'red';
+                        document.getElementById('item14').style.border = '4px solid green';
 
-                         document.getElementById('item2').disabled=true;
-                         document.getElementById('div5').disabled=true;
-
-                         document.getElementById('item2').style.backgroundColor = 'green';
-                         document.getElementById('item2').style.border = '2px solid red';
-                        document.getElementById('div5').style.backgroundColor = 'green';
-                        document.getElementById('div5').style.border = '2px solid red';
-                        result5=true;
-
-
-                    } else {
-                        document.getElementById('item2').disabled=true;
-                         document.getElementById('div5').disabled=true;
-
-                         document.getElementById('item2').style.backgroundColor = 'red';
-                         document.getElementById('item2').style.border = '2px solid yellow';
-                        document.getElementById('div5').style.backgroundColor = 'red';
-                        document.getElementById('div5').style.border = '2px solid yellow';
-                    }
-
-                    if (Math.abs(div6topPosition-topPosition4)<10) {
-                        // alert("uraaaaa !"+topPosition+"uraaaaa !"+div1topPosition);
-
-                         document.getElementById('item4').disabled=true;
-                         document.getElementById('div6').disabled=true;
-
-                         document.getElementById('item4').style.backgroundColor = 'green';
-                         document.getElementById('item4').style.border = '2px solid red';
-                        document.getElementById('div6').style.backgroundColor = 'green';
-                        document.getElementById('div6').style.border = '2px solid red';
-                        result6=true;
-
-
-                    } else {
-                        document.getElementById('item4').disabled=true;
-                         document.getElementById('div6').disabled=true;
-
-                         document.getElementById('item4').style.backgroundColor = 'red';
-                         document.getElementById('item4').style.border = '2px solid yellow';
-                        document.getElementById('div6').style.backgroundColor = 'red';
-                        document.getElementById('div6').style.border = '2px solid yellow';
                     }
 
 
