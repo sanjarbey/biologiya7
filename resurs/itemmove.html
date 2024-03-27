@@ -38,18 +38,16 @@
             margin: 20px;
           }
 
-          .text1{
-                  width: 200px;
-                  height: 80px;
-                  border: 3px solid darkblue;
-                  background-color: rgb(85, 103, 244);
-                  border-radius: 15px;
-                  padding: 5px;
-                  margin: 5px;
+          #zanjir1,#nay1,#diffuz1,#stvol1{
+
+                  height: 100px !important;
+                  width: 210px;
+                  border: 3px solid rgb(8, 122, 5);
+                  background-color: rgb(74, 202, 231);
+                  border-radius: 25px;
+                  padding: 1px;
+                  margin: 1px;
                   cursor: pointer;
-                  /* display: block; */
-                  float: left;
-                  /* font-weight: 900; */
                   font-size: 20px;
                   text-align: center;
                   color: aliceblue;
@@ -83,7 +81,9 @@
 
                 }
                 img{
-                  width: 80%;
+                  /* width: 250px; */
+                  margin: 5px;
+                  cursor: pointer;
                 }
 
         </style>
@@ -143,36 +143,45 @@
           <div class="row">
 
             <h1 class="col text-center">
-              O’simliklar sistematikasining asosiy taksonomik guruhlarini sxemada aks ettiring.
+              Umurtqalilarning qon aylanish sistemasi mos  oziq zanjirini tuzing.
             </h1>
             <!-- <h2>Odamning ayirish organlari  rasmida berilgan sonlar va organ nomlarini muvofiqlashtiring. </h2> -->
           </div>
 
 <div>
-  <!-- <img src="images/topshiriq/osimliklar.png" > -->
+
 </div>
+
+
 <section>
-
-
-
     <div class="row">
 
-      <div id="nerv1" class="col" ><img src="images/topshiriq/topshiriq18_1.jpg"></div>
-      <div id="nerv2" class="col" ><img src="images/topshiriq/topshiriq18_2.jpg"></div>
-      <div id="nerv3" class="col" ><img src="images/topshiriq/topshiriq18_3.jpg"></div>
-      <div id="nerv4" class="col" ><img src="images/topshiriq/topshiriq18_4.jpg"></div>
+
+        <div id="nerv1" class="col-md-3" ><img src="images/topshiriq/qon_as_baliq.jpg"></div>
+
+        <div id="nerv2" class="col-md-3"><img src="images/topshiriq/qon_as_baqa.jpg"></div>
+
+        <div id="nerv3" class="col-md-3"><img src="images/topshiriq/qon_as_kalta.jpg"></div>
+
+        <div id="nerv4" class="col-md-3"><img src="images/topshiriq/qon_as_qush.jpg"></div>
+
+
 
     </div>
 
-    <div class="row">
-      <div class="text1" id="matn1">oddiy shingil karam turp </div>
-      <div class="text1" id="matn4">so’ta makkajo'xori</div>
-    </div>
-    <div class="row">
-      <div class="text1" id="matn2">oddiy soyabon  osh piyoz</div>
-      <div class="text1" id="matn3">oddiy qalqoncha gilos nok</div>
-    </div>
 
+
+  </div>
+````````````````````A122
+
+  <div class="row">
+    <div id="nerv1" class="col-md-3" ><img src="images/topshiriq/qon_as1.jpg"></div>
+    <div id="nerv2" class="col-md-3"><img src="images/topshiriq/qon_as2.jpg"></div>
+  </div>
+
+  <div class="row">
+    <div id="nerv3" class="col-md-3"><img src="images/topshiriq/qon_as3.jpg"></div>
+    <div id="nerv4" class="col-md-3"><img src="images/topshiriq/qon_as4.jpg"></div>
   </div>
 <br>
 <br>
@@ -305,232 +314,122 @@
             }
 
 
-            moveElementDoc("matn1");
-            moveElementDoc("matn2");
-            moveElementDoc("matn3");
-            moveElementDoc("matn4");
-            // moveElementDoc("item5");
-            // moveElementDoc("item6");
-            // moveElementDoc("item7");
+            moveElementDoc("zanjir1");
+            moveElementDoc("nay1");
+            moveElementDoc("diffuz1");
+            moveElementDoc("stvol1");
 
-
-            // moveElementDoc("item8");
-            // moveElementDoc("item9");
-            // // moveElementDoc("item10");
-            // moveElementDoc("item11");
-            // moveElementDoc("item12");
-            // moveElementDoc("item13");
-            // moveElementDoc("item14");
 
 var count=0;
             function check_position() {
               // alert("ASSALOM");
 
 
-                    var item1 = document.getElementById('matn1');
+                    var item1 = document.getElementById('stvol');
                     var rect1 = item1.getBoundingClientRect();
                     var topPosition1 = rect1.left;
+                    var top1width=rect1.width;
 
-                    var item2 = document.getElementById('nerv1');
+                    var item2 = document.getElementById('stvol1');
                     var rect2 = item2.getBoundingClientRect();
                     var topPosition2 = rect2.left;
-                    // alert(topPosition1);
-                    // alert(topPosition3);
 
-                    if (topPosition1<topPosition3) {
-
-                         document.getElementById('item1').disabled=true;
-                         document.getElementById('item1').style.backgroundColor = 'green';
-                         document.getElementById('item1').style.border = '4px solid red';
-                       }
+                    if (topPosition1<=topPosition2&& topPosition2<=topPosition1+top1width) {
+                        document.getElementById('stvol1').disabled=true;
+                        document.getElementById('stvol1').style.backgroundColor = 'green';
+                        document.getElementById('stvol1').style.border = '4px solid red';
+                    }
                     else{
-
-                          document.getElementById('item1').disabled=true;
-                         document.getElementById('item1').style.backgroundColor = 'red';
-                         document.getElementById('item1').style.border = '4px solid green';
+                         document.getElementById('stvol1').disabled=true;
+                         document.getElementById('stvol1').style.backgroundColor = 'red';
+                         document.getElementById('stvol1').style.border = '4px solid darkblue';
 
                     }
 
 
-                    var item4 = document.getElementById('item4');
+
+                    var item4 = document.getElementById('zanjir');
                     var rect4 = item4.getBoundingClientRect();
-                    var topPosition4 = rect4.top;
+                    var topPosition4 = rect4.left;
+                    var top4width=rect4.width;
 
-                    var item5 = document.getElementById('item5');
-                    var rect5 = item5.getBoundingClientRect();
-                    var topPosition5 = rect5.top;
+                    var item3 = document.getElementById('zanjir1');
+                    var rect3 = item3.getBoundingClientRect();
+                    var topPosition3 = rect3.left;
 
+                    if(topPosition4<topPosition3&&topPosition3<topPosition4+top4width){
 
-                    if(topPosition3<topPosition4&&topPosition3<topPosition5){
-
-                          document.getElementById('item3').disabled=true;
-                          document.getElementById('item3').style.backgroundColor = 'green';
-                          document.getElementById('item3').style.border = '4px solid red';
-
-                          document.getElementById('item4').disabled=true;
-                          document.getElementById('item4').style.backgroundColor = 'green';
-                          document.getElementById('item4').style.border = '4px solid red';
-
-                          document.getElementById('item5').disabled=true;
-                          document.getElementById('item5').style.backgroundColor = 'green';
-                          document.getElementById('item5').style.border = '4px solid red';
-
+                          document.getElementById('zanjir1').disabled=true;
+                          document.getElementById('zanjir1').style.backgroundColor = 'green';
+                          document.getElementById('zanjir1').style.border = '4px solid red';
                     }
 
                     else{
 
-                      document.getElementById('item3').disabled=true;
-                      document.getElementById('item3').style.backgroundColor = 'red';
-                      document.getElementById('item3').style.border = '4px solid green';
-
-                      document.getElementById('item4').disabled=true;
-                      document.getElementById('item4').style.backgroundColor = 'red';
-                      document.getElementById('item4').style.border = '4px solid green';
-
-                      document.getElementById('item5').disabled=true;
-                      document.getElementById('item5').style.backgroundColor = 'red';
-                      document.getElementById('item5').style.border = '4px solid green';
-
-                                          }
+                      document.getElementById('zanjir1').disabled=true;
+                      document.getElementById('zanjir1').style.backgroundColor = 'red';
+                      document.getElementById('zanjir1').style.border = '4px solid darkblue';
+                    }
 
 
 
 
-                    var item6 = document.getElementById('item6');
+                    var item6 = document.getElementById('nay');
                     var rect6 = item6.getBoundingClientRect();
-                    var topPosition6 = rect6.top;
+                    var topPosition6 = rect6.left;
+                    var top6width=rect6.width;
 
-                    var item7 = document.getElementById('item7');
+                    var item7 = document.getElementById('nay1');
                     var rect7 = item7.getBoundingClientRect();
-                    var topPosition7 = rect7.top;
+                    var topPosition7 = rect7.left;
 
+                    if(topPosition6<topPosition7&&topPosition7<topPosition6+top6width){
 
-
-                    if(topPosition5<topPosition6&&topPosition5<topPosition7){
-
-                            document.getElementById('item6').disabled=true;
-                            document.getElementById('item6').style.backgroundColor = 'green';
-                            document.getElementById('item6').style.border = '4px solid red';
-
-                            document.getElementById('item7').disabled=true;
-                            document.getElementById('item7').style.backgroundColor = 'green';
-                            document.getElementById('item7').style.border = '4px solid red';
+                            document.getElementById('nay1').disabled=true;
+                            document.getElementById('nay1').style.backgroundColor = 'green';
+                            document.getElementById('nay1').style.border = '4px solid red';
                     }
 
                     else{
 
-                          document.getElementById('item6').disabled=true;
-                          document.getElementById('item6').style.backgroundColor = 'red';
-                          document.getElementById('item6').style.border = '4px solid green';
-
-                          document.getElementById('item7').disabled=true;
-                          document.getElementById('item7').style.backgroundColor = 'red';
-                          document.getElementById('item7').style.border = '4px solid green';
+                          document.getElementById('nay1').disabled=true;
+                          document.getElementById('nay1').style.backgroundColor = 'red';
+                          document.getElementById('nay1').style.border = '4px solid darkblue';
                     }
 
 
 
 
-                    var div8 = document.getElementById('item8');
+                    var div8 = document.getElementById('diffuz');
                     var div8rect = div8.getBoundingClientRect();
-                    var topPosition8 = div8rect.top;
+                    var topPosition8 = div8rect.left;
+                    var top8width=div8rect.width;
 
-                    var div9 = document.getElementById('item9');
+                    var div9 = document.getElementById('diffuz1');
                     var div9rect = div9.getBoundingClientRect();
-                    var topPosition9 = div9rect.top;
+                    var topPosition9 = div9rect.left;
 
-                    if(topPosition7<topPosition8&&topPosition7<topPosition8){
 
-                        document.getElementById('item8').disabled=true;
-                        document.getElementById('item8').style.backgroundColor = 'green';
-                        document.getElementById('item8').style.border = '4px solid red';
+                    if(topPosition8<topPosition9&&topPosition9<=topPosition8+top8width){
 
-                        document.getElementById('item9').disabled=true;
-                        document.getElementById('item9').style.backgroundColor = 'green';
-                        document.getElementById('item9').style.border = '4px solid red';
+                        document.getElementById('diffuz1').disabled=true;
+                        document.getElementById('diffuz1').style.backgroundColor = 'green';
+                        document.getElementById('diffuz1').style.border = '4px solid red';
                     }
 
                     else{
 
-                        document.getElementById('item8').disabled=true;
-                        document.getElementById('item8').style.backgroundColor = 'red';
-                        document.getElementById('item8').style.border = '4px solid green';
-
-                        document.getElementById('item9').disabled=true;
-                        document.getElementById('item9').style.backgroundColor = 'red';
-                        document.getElementById('item9').style.border = '4px solid green';
+                        document.getElementById('diffuz1').disabled=true;
+                        document.getElementById('diffuz1').style.backgroundColor = 'red';
+                        document.getElementById('diffuz1').style.border = '4px solid darkblue';
                     }
 
 
-
-                    var div11 = document.getElementById('item11');
-                    var div11rect = div11.getBoundingClientRect();
-                    var topPosition11 = div11rect.top;
-
-                    var div12 = document.getElementById('item12');
-                    var div12rect = div12.getBoundingClientRect();
-                    var topPosition12 = div12rect.top;
-
-
-                    if(topPosition9<topPosition11&&topPosition9<topPosition12){
-
-                          document.getElementById('item11').disabled=true;
-                          document.getElementById('item11').style.backgroundColor = 'green';
-                          document.getElementById('item11').style.border = '4px solid red';
-
-                          document.getElementById('item12').disabled=true;
-                          document.getElementById('item12').style.backgroundColor = 'green';
-                          document.getElementById('item12').style.border = '4px solid red';
-                      }
-                      else{
-                          document.getElementById('item11').disabled=true;
-                          document.getElementById('item11').style.backgroundColor = 'red';
-                          document.getElementById('item11').style.border = '4px solid green';
-
-                          document.getElementById('item12').disabled=true;
-                          document.getElementById('item12').style.backgroundColor = 'red';
-                          document.getElementById('item12').style.border = '4px solid green';
-
-                      }
-
-
-                    var div13 = document.getElementById('item13');
-                    var div13rect = div13.getBoundingClientRect();
-                    var topPosition13 = div13rect.top;
-
-                    var div14 = document.getElementById('item14');
-                    var div14rect = div14.getBoundingClientRect();
-                    var topPosition14 = div14rect.top;
-
-                    if(topPosition11<topPosition14&&topPosition11<topPosition13){
-
-                        document.getElementById('item13').disabled=true;
-                        document.getElementById('item13').style.backgroundColor = 'green';
-                        document.getElementById('item13').style.border = '4px solid red';
-
-                        document.getElementById('item14').disabled=true;
-                        document.getElementById('item14').style.backgroundColor = 'green';
-                        document.getElementById('item14').style.border = '4px solid red';
-                    }
-                    else{
-
-                        document.getElementById('item13').disabled=true;
-                        document.getElementById('item13').style.backgroundColor = 'red';
-                        document.getElementById('item13').style.border = '4px solid green';
-
-                        document.getElementById('item14').disabled=true;
-                        document.getElementById('item14').style.backgroundColor = 'red';
-                        document.getElementById('item14').style.border = '4px solid green';
-
-                    }
-
-
-
-
+                    document.getElementById('mybutton').disabled=true;
             }
 
 
-            // document.getElementById('mybutton').disabled=true;
+
 
 
 
