@@ -49,7 +49,7 @@
 
   .text2{
     width: auto;
-    height: 40px;
+    height: 50px;
      border: 3px solid darkblue;
     border-radius: 15px;
     padding: 5px;
@@ -141,7 +141,7 @@
             </div> -->
 
             <div class="col-md-3">
-              <div id="mant9" class="text1">Qoplovchi to'qima</div>
+              <div id="mant9" class="text1"  onclick=go(); >Qoplovchi to'qima</div>
               <div id="mant10" class="text1">Nerv to'qima</div>
               <div id="mant11" class="text1">Asosiy to'qima</div>
               <div id="mant1" class="text1">O'tkazuvchi to'qima</div>
@@ -166,7 +166,7 @@
             <div class="col-md-6">
 
 
-              <div id="mant13" class="text2">O'simlik organlariga mustahkamlik (tayanch) beruvchi to'qima.</div>
+              <div id="mant13" class="text2" onclick=go();>O'simlik organlariga mustahkamlik (tayanch) beruvchi to'qima.</div>
               <div id="mant3" class="text2">Qisqarish xususiyatiga ega.</div>
               <div id="mant4" class="text2">O'simlik tanasida moddalar transportini ta'minlaydi.</div>
               <div id="mant14" class="text2">O'simlikni yuqori haroratdan himoya qiladi.</div>
@@ -293,6 +293,62 @@
   <script type="text/javascript" src="js/bootstrap.js"></script>
 
   <script>
+
+var frist = false;
+var second=false;
+
+
+function go(id) {
+  alert("first bir  "+frist);
+  alert("second  "+second);
+    // alert(frist);
+    if(frist){
+      var a = document.getElementById(id).value;
+      alert( "     => "+a );
+      second=true;
+    }
+    frist=true;
+    alert("first bir  "+frist);
+    alert("second  "+second);
+
+
+    if(frist&&second){
+      var a1 = document.getElementById(id);
+      // moves(a,a1);
+      alert(a+ "     "+ a1);
+      frist = false;
+      second=false;
+    }
+
+};
+
+function moves(a,a1) {
+
+
+
+
+   if (a== 2) {
+
+      // if (a1=="matn13"&&a=="matn9"){
+
+      a.style.fontFamily = "sans-serif";
+      a.style.color = "green";
+
+      a1.style.fontFamily = "sans-serif";
+      a1.style.color = "green";
+      clicks=0;
+      }
+      else{
+        a.style.fontFamily = "sans-serif";
+      a.style.color = "red";
+
+      a1.style.fontFamily = "sans-serif";
+      a1.style.color = "red";
+        }
+    //  }
+
+
+ }
 
 // function getActualWidth()
 // {
