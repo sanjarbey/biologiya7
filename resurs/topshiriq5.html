@@ -36,27 +36,51 @@
 
   <link rel="stylesheet" href="css/css-circular-prog-bar.css">
 <style>
-  .text1{
-    width: auto;
-    height: 40px;
-     border: 3px solid darkblue;
-    border-radius: 15px;
-    padding: 5px;
-    margin: 5px;
-    cursor: pointer;
-    display: block;
-  }
 
-  .text2{
-    width: auto;
-    height: 50px;
-     border: 3px solid darkblue;
-    border-radius: 15px;
-    padding: 5px;
-    margin: 5px;
+
+.quiz-box{
+    background-color: rgb(238, 234, 217);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+    width: 700px;
+    overflow: hidden;
+
+}
+.quiz-header{
+    padding: 64px;
+}
+.quiz-header ul{
+    list-style: none;
+    padding: 0;
+}
+.quiz-header  ul li{
+    font-size: 20px;
+    margin: 15px 0;
+}
+.quiz-header ul li label{
     cursor: pointer;
+}
+button{
+    background-color: #5ec6eb;
+    border: none;
     display: block;
-  }
+    width: 100%;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 15px;
+    transition: all 0.5s ease;
+}
+button:hover{
+    background-color: #438faa;
+}
+button:focus{
+    outline: none;
+    background-color: #5ec6eb;
+}
+
 </style>
 
 </head>
@@ -124,66 +148,47 @@
 
 
 
-          <!-- Qoplovchi to'qima
-          Nerv to'qima
-          Asosiy to'qima
-          O'tkazuvchi to'qima
-          Muskul to'qima
-          Mexanik to'qima
-          Biriktiruvchi to'qima
-          Hosil qiluvchi to'qima
-          Epiteiiy to'qima
-          Ajratnvchi to'qima -->
-
-          <div class="row">
-            <!-- <div class="col-md-6">
-                  <img src="images/topshiriq/osimliklar.png" alt="">
-            </div> -->
-
-            <div class="col-md-3">
-              <div id="mant9" class="text1"  onclick=go(); >Qoplovchi to'qima</div>
-              <div id="mant10" class="text1">Nerv to'qima</div>
-              <div id="mant11" class="text1">Asosiy to'qima</div>
-              <div id="mant1" class="text1">O'tkazuvchi to'qima</div>
-              <div id="mant2" class="text1">Muskul to'qima</div>
-              <div id="mant5" class="text1">Mexanik to'qima</div>
-              <div id="mant12" class="text1">Biriktiruvchi to'qima</div>
-              <div id="mant12" class="text1">Hosil qiluvchi to'qima</div>
-              <div id="mant12" class="text1">Epiteiiy to'qima</div>
-              <div id="mant12" class="text1">Ajratnvchi to'qima</div>
-            </div>
-
-            <!-- O'simlik organlariga mustahkamlik (tayanch) beruvchi to'qima.
-            Qisqarish xususiyatiga ega.
-            O'simlik tanasida moddalar transportini ta'minlaydi.
-            O'simlikni yuqori haroratdan himoya qiladi.
-            Organizmni tashqi ta’siriardan himoya qiladi.
-            Fotosintezni amalga oshiradi.
-            Ta'sirlarni qabul qiladi.
-            Gullarning changlanshi, mevalarning tarqalishi uchun xizmat qiladi.
-            Fotosintez qilish xususiyatiga ega. -->
-
-            <div class="col-md-6">
 
 
-              <div id="mant13" class="text2" onclick=go();>O'simlik organlariga mustahkamlik (tayanch) beruvchi to'qima.</div>
-              <div id="mant3" class="text2">Qisqarish xususiyatiga ega.</div>
-              <div id="mant4" class="text2">O'simlik tanasida moddalar transportini ta'minlaydi.</div>
-              <div id="mant14" class="text2">O'simlikni yuqori haroratdan himoya qiladi.</div>
-              <div id="mant6" class="text2">Organizmni tashqi ta’siriardan himoya qiladi.</div>
-              <div id="mant7" class="text2">Fotosintezni amalga oshiradi.</div>
-              <div id="mant8" class="text2">Ta'sirlarni qabul qiladi.</div>
-              <div id="mant8" class="text2">Gullarning changlanshi, mevalarning tarqalishi uchun xizmat qiladi.</div>
-              <div id="mant8" class="text2">Fotosintez qilish xususiyatiga ega.</div>
+          <div class="row ml-4">
+
+            <div class="quiz-box" id="quiz">
+              <div class="quiz-header">
+                  <h2 id="question">Question text</h2>
+                  <ul>
+                      <li>
+                          <input type="radio" name="answer" id="a" class="answer">
+                          <label for="a" id="a_text">Question</label>
+                      </li>
+                      <li>
+                          <input type="radio" name="answer" id="b" class="answer">
+                          <label for="b" id="b_text">Question</label>
+                      </li>
+                      <li>
+                          <input type="radio" name="answer" id="c" class="answer">
+                          <label for="c" id="c_text">Question</label>
+                      </li>
+                      <li>
+                          <input type="radio" name="answer" id="d" class="answer">
+                          <label for="d" id="d_text">Question</label>
+                      </li>
+                  </ul>
+              </div>
+              <button id="submit">Yuborish</button>
+          </div>
 
 
-            </div>
+
+
+
+
+
 
           </div>
 
-      </div>
+    </div>
 
-  <button class="btn btn-success mt-4 pr-3"> Tekshirish </button>
+
 </section>
 
 
@@ -292,123 +297,152 @@
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
 
-  <script>
+  <script type="text/javascript">
+      const quizData = [
+    {
+        question: "O'simlik organlariga mustahkamlik (tayanch) beruvchi to'qima ?",
+        a: "Biriktiruvchi to'qima",
+        b: "Mexanik to'qima",
+        c: "Muskul to'qima",
+        d: "Qoplovchi to'qima",
+        correct: "b",
+    },
+    {
+        question: "Fotosintezni amalga oshiradi ?",
+        a: "Ajratnvchi to'qima",
+        b: "O'tkazuvchi to'qima",
+        c: "Epiteiiy to'qima",
+        d: "Asosiy to'qima",
+        correct: "d",
+    },
+    {
+        question: "Organlarni o'zaro bog'laydi ?",
+        a: "Biriktiruvchi to'qima",
+        b: "Mexanik to'qima",
+        c: "Muskul to'qima",
+        d: "Qoplovchi to'qima",
+        correct: "a",
+    },
+    {
+        question: "Ta'sirlarni qabul qiladi ?",
+        a: "Asosiy to'qima",
+        b: "Hosil qiluvchi to'qima",
+        c: "Qoplovchi to'qima",
+        d: "Nerv to'qima",
+        correct: "d",
+    },
+    {
+        question: "Qisqarish xususiyatiga ega ?",
+        a: "Biriktiruvchi to'qima",
+        b: "Mexanik to'qima",
+        c: "Muskul to'qima",
+        d: "Qoplovchi to'qima",
+        correct: "c",
+    },
+    {
+        question: "O'simlik tanasida moddalar transportini ta'minlaydi ?",
+        a: "Ajratnvchi to'qima",
+        b: "O'tkazuvchi to'qima",
+        c: "Epiteiiy to'qima",
+        d: "Asosiy to'qima",
+        correct: "b",
+    },
+    {
+        question: "Gullarning changlanshi, mevalarning tarqalishi uchun xizmat qiladi ?",
+        a: "Ajratnvchi to'qima",
+        b: "O'tkazuvchi to'qima",
+        c: "Epiteiiy to'qima",
+        d: "Asosiy to'qima",
+        correct: "a",
+    },
+    {
+        question: "O'simlikni yuqori haroratdan himoya qiladi ?",
+        a: "Biriktiruvchi to'qima",
+        b: "Mexanik to'qima",
+        c: "Muskul to'qima",
+        d: "Qoplovchi to'qima",
+        correct: "d",
+    },
+    {
+        question: "Fotosintez qilish xususiyatiga ega ?",
+        a: "Nerv to'qima",
+        b: "Hosil qiluvchi to'qima",
+        c: "Qoplovchi to'qima",
+        d: "Asosiy to'qima",
+        correct: "b",
+    },
+    {
+        question: "Organizmni tashqi ta’siriardan himoya qiladi ?",
+        a: "Ajratnvchi to'qima",
+        b: "O'tkazuvchi to'qima",
+        c: "Epiteiiy to'qima",
+        d: "Asosiy to'qima",
+        correct: "c",
+    },
+];
 
-var frist = false;
-var second=false;
+const quiz = document.getElementById('quiz');
+const answerElements = document.querySelectorAll('.answer');
+const questionElement = document.getElementById('question');
+const a_text = document.getElementById('a_text');
+const b_text = document.getElementById('b_text');
+const c_text = document.getElementById('c_text');
+const d_text = document.getElementById('d_text');
+const submit = document.getElementById('submit');
 
+let currentQuiz = 0;
+let score = 0;
 
-function go(id) {
-  alert("first bir  "+frist);
-  alert("second  "+second);
-    // alert(frist);
-    if(frist){
-      var a = document.getElementById(id).value;
-      alert( "     => "+a );
-      second=true;
-    }
-    frist=true;
-    alert("first bir  "+frist);
-    alert("second  "+second);
+loadQuiz();
 
+function loadQuiz(){
+    deselectAnswers();
 
-    if(frist&&second){
-      var a1 = document.getElementById(id);
-      // moves(a,a1);
-      alert(a+ "     "+ a1);
-      frist = false;
-      second=false;
-    }
+    const currentQuizData = quizData[currentQuiz];
 
-};
+    questionElement.innerText = currentQuizData.question;
+    a_text.innerText = currentQuizData.a;
+    b_text.innerText = currentQuizData.b;
+    c_text.innerText = currentQuizData.c;
+    d_text.innerText = currentQuizData.d;
+}
 
-function moves(a,a1) {
+function deselectAnswers(){
+    answerElements.forEach(answerEl => answerEl.checked = false)
+}
 
+function getSelected(){
+    let answer;
 
-
-
-   if (a== 2) {
-
-      // if (a1=="matn13"&&a=="matn9"){
-
-      a.style.fontFamily = "sans-serif";
-      a.style.color = "green";
-
-      a1.style.fontFamily = "sans-serif";
-      a1.style.color = "green";
-      clicks=0;
-      }
-      else{
-        a.style.fontFamily = "sans-serif";
-      a.style.color = "red";
-
-      a1.style.fontFamily = "sans-serif";
-      a1.style.color = "red";
+    answerElements.forEach(answerEl => {
+        if(answerEl.checked){
+            answer = answerEl.id;
         }
-    //  }
+    });
 
+    return answer;
+}
 
- }
+submit.addEventListener('click', () => {
+    const answer = getSelected();
 
-// function getActualWidth()
-// {
-//     var actualWidth = window.innerWidth ||
-//                       document.documentElement.clientWidth ||
-//                       document.body.clientWidth ||
-//                       document.body.offsetWidth;
+    if(answer){
+        if(answer === quizData[currentQuiz].correct){
+            score++;
+        }
 
-//     return actualWidth;
-// }
+        currentQuiz++;
 
-// const w  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-// const h = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
-
-    function moveElementDoc(id) { // id is parameter
-
-
-            const element = document.getElementById(id); // we will call our id from html with this parameter
-
-            // let heightEl = element.clientHeight / 2; // half height (clientHeight = height of div)
-            // let widthEl = element.clientWidth / 2; //half width
-            // //we need it, to center our mouse in our div
-            // console.log(heightEl);
-            // console.log(widthEl);
-            element.addEventListener("mousedown", function() {
-                document.addEventListener("mousemove", movingmouse);
-
-                function movingmouse(e) {
-                    element.style.position = "absolute";
-                    element.style.left = e.clientX - heightEl + 'px'; // position-div-"id" = positionMoveMouse"x" and "y" like bottom - height"let heightEl"
-                    element.style.top = e.clientY - widthEl + 'px';
-
-
-                // console.log(e.clientX);
-                // console.log(e.clientY);
-
-            }
-            // alert(e.clientX+" "+e.clientY);
-
-                document.addEventListener("mouseup", function() {
-                    document.removeEventListener("mousemove", movingmouse)
-                })
-            })
-
-            }
-
-
-            // moveElementDoc("mant1");
-            // moveElementDoc("mant2");
-            // moveElementDoc("mant3");
-            // moveElementDoc("mant4");
-            // moveElementDoc("mant5");
-            // moveElementDoc("mant6");
-            // moveElementDoc("mant7");
-            // moveElementDoc("mant8");
-            // moveElementDoc("mant9");
-            // moveElementDoc("mant11");
-            // moveElementDoc("mant12");
-            // moveElementDoc("mant13");
-            // moveElementDoc("mant14");
+        if(currentQuiz < quizData.length){
+            loadQuiz();
+        }
+        else{
+            quiz.innerHTML = `<h2>Siz ${quizData.length} ta savoldan ${score} tasiga to'g'ri javob berdingiz</h2>
+            <button onclick="location.reload()">Qayta boshlash</button>
+            `;
+        }
+    }
+});
   </script>
 
 
