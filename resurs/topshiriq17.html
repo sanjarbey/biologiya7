@@ -158,29 +158,30 @@
 
     <div class="row">
 
-      <div  class="col" ><img src="images/topshiriq/topshiriq18_1.jpg" id="karam" ></div>
-      <div  class="col" ><img src="images/topshiriq/topshiriq18_2.jpg" id="piyoz"></div>
-      <div  class="col" ><img src="images/topshiriq/topshiriq18_3.jpg" id="gilos"></div>
-      <div  class="col" ><img src="images/topshiriq/topshiriq18_4.jpg" id="makka"></div>
+      <div  class="col" ><img src="images/topshiriq/topshiriq18_1.jpg" id="karamf" ></div>
+      <div  class="col" ><img src="images/topshiriq/topshiriq18_2.jpg" id="piyozf"></div>
+      <div  class="col" ><img src="images/topshiriq/topshiriq18_3.jpg" id="gilosf"></div>
+      <div  class="col" ><img src="images/topshiriq/topshiriq18_4.jpg" id="makkaf"></div>
 
     </div>
 
     <div class="row">
-      <div class="text1" id="gilos1"> oddiy qalqonchak</div>
-      <div class="text1" id="gilos12"> gilos</div>
-      <div class="text1" id="gilos13"> nok</div>
+      <div class="text1" id="piyoz">Osh piyoz</div>
+      <div class="text1" id="qalqon"> Oddiy qalqonchak</div>
+      <div class="text1" id="nok"> Nok</div>
 
 
-      <div class="text1" id="makka1">so’ta </div>
-      <div class="text1" id="makka12">makkajo'xori</div>
+      <div class="text1" id="sota">So’ta </div>
+      <div class="text1" id="karam">Karam </div>
+      <div class="text1" id="makka">Makkajo'xori</div>
 
-      <div class="col text1" id="karam1">oddiy shingil </div>
-      <div class="col text1" id="karam12">karam </div>
-      <div class="col text1" id="karam13">turp </div>
+      <div class="text1" id="shingil">Oddiy shingil </div>
+      <div class="text1" id="turp">Turp </div>
+      <div class="text1" id="gilos"> Gilos</div>
 
 
-      <div class="text1" id="piyoz1">oddiy soyabon </div>
-      <div class="text1" id="piyoz12">oddiy soyabon</div>
+      <div class="text1" id="soyabon">Oddiy soyabon </div>
+
 
     </div>
 
@@ -316,19 +317,19 @@
             }
 
 
-            moveElementDoc("karam1");
-            moveElementDoc("karam12");
-            moveElementDoc("karam13");
+            moveElementDoc("karam");
+            moveElementDoc("turp");
+            moveElementDoc("shingil");
 
-            moveElementDoc("makka1");
-            moveElementDoc("makka12");
+            moveElementDoc("piyoz");
+            moveElementDoc("soyabon");
 
-            moveElementDoc("gilos1");
-            moveElementDoc("gilos12");
-            moveElementDoc("gilos13");
+            moveElementDoc("gilos");
+            moveElementDoc("nok");
+            moveElementDoc("qalqon");
 
-            moveElementDoc("piyoz1");
-            moveElementDoc("piyoz12");
+            moveElementDoc("makka");
+            moveElementDoc("sota");
             // moveElementDoc("item5");
             // moveElementDoc("item6");
             // moveElementDoc("item7");
@@ -347,116 +348,116 @@ var count=0;
               // alert("ASSALOM");
 
 
-                    var item1 = document.getElementById('karam');
+                    var item1 = document.getElementById('karamf');
                     var rect1 = item1.getBoundingClientRect();
                     var topPosition1 = rect1.left;
                     var top1width=rect1.width;
 
-                    var item2 = document.getElementById('karam1');
+                    var item2 = document.getElementById('karam');
                     var rect2 = item2.getBoundingClientRect();
                     var topPosition2 = rect2.left;
 
 
                     if (topPosition1<=topPosition2 && topPosition2<=topPosition1+top1width) {
-                        document.getElementById('karam1').disabled=true;
-                        document.getElementById('karam1').style.backgroundColor = 'green';
-                        document.getElementById('karam1').style.border = '4px solid red';
+                        document.getElementById('karam').disabled=true;
+                        document.getElementById('karam').style.backgroundColor = 'green';
+                        document.getElementById('karam').style.border = '4px solid red';
                     }
                     else{
-                         document.getElementById('karam1').disabled=true;
-                         document.getElementById('karam1').style.backgroundColor = 'red';
-                         document.getElementById('karam1').style.border = '4px solid darkblue';
+                         document.getElementById('karam').disabled=true;
+                         document.getElementById('karam').style.backgroundColor = 'red';
+                         document.getElementById('karam').style.border = '4px solid darkblue';
                     }
 
 
-                    var item22 = document.getElementById('karam12');
+                    var item22 = document.getElementById('turp');
                     var rect22 = item22.getBoundingClientRect();
                     var topPosition22 = rect22.left;
 
 
                     if (topPosition1<=topPosition22 && topPosition22<=topPosition1+top1width) {
-                        document.getElementById('karam12').disabled=true;
-                        document.getElementById('karam12').style.backgroundColor = 'green';
-                        document.getElementById('karam12').style.border = '4px solid red';
+                        document.getElementById('turp').disabled=true;
+                        document.getElementById('turp').style.backgroundColor = 'green';
+                        document.getElementById('turp').style.border = '4px solid red';
                     }
                     else{
-                         document.getElementById('karam12').disabled=true;
-                         document.getElementById('karam12').style.backgroundColor = 'red';
-                         document.getElementById('karam12').style.border = '4px solid darkblue';
+                         document.getElementById('turp').disabled=true;
+                         document.getElementById('turp').style.backgroundColor = 'red';
+                         document.getElementById('turp').style.border = '4px solid darkblue';
                     }
 
 
-                    var item23 = document.getElementById('karam13');
+                    var item23 = document.getElementById('shingil');
                     var rect23 = item23.getBoundingClientRect();
                     var topPosition23 = rect23.left;
 
 
                     if (topPosition1<=topPosition23 && topPosition23<=topPosition1+top1width) {
-                        document.getElementById('karam13').disabled=true;
-                        document.getElementById('karam13').style.backgroundColor = 'green';
-                        document.getElementById('karam13').style.border = '4px solid red';
+                        document.getElementById('shingil').disabled=true;
+                        document.getElementById('shingil').style.backgroundColor = 'green';
+                        document.getElementById('shingil').style.border = '4px solid red';
                     }
                     else{
-                         document.getElementById('karam13').disabled=true;
-                         document.getElementById('karam13').style.backgroundColor = 'red';
-                         document.getElementById('karam13').style.border = '4px solid darkblue';
+                         document.getElementById('shingil').disabled=true;
+                         document.getElementById('shingil').style.backgroundColor = 'red';
+                         document.getElementById('shingil').style.border = '4px solid darkblue';
                     }
 
 
 
-                    var item4 = document.getElementById('piyoz');
+                    var item4 = document.getElementById('piyozf');
                     var rect4 = item4.getBoundingClientRect();
                     var topPosition4 = rect4.left;
                     var top4width=rect4.width;
 
-                    var item3 = document.getElementById('piyoz1');
+                    var item3 = document.getElementById('piyoz');
                     var rect3 = item3.getBoundingClientRect();
                     var topPosition3 = rect3.left;
 
 
                     if(topPosition4<topPosition3&&topPosition3<topPosition4+top4width){
 
-                          document.getElementById('piyoz1').disabled=true;
-                          document.getElementById('piyoz1').style.backgroundColor = 'green';
-                          document.getElementById('piyoz1').style.border = '4px solid red';
+                          document.getElementById('piyoz').disabled=true;
+                          document.getElementById('piyoz').style.backgroundColor = 'green';
+                          document.getElementById('piyoz').style.border = '4px solid red';
                     }
 
                     else{
 
-                      document.getElementById('piyoz1').disabled=true;
-                      document.getElementById('piyoz1').style.backgroundColor = 'red';
-                      document.getElementById('piyoz1').style.border = '4px solid darkblue';
+                      document.getElementById('piyoz').disabled=true;
+                      document.getElementById('piyoz').style.backgroundColor = 'red';
+                      document.getElementById('piyoz').style.border = '4px solid darkblue';
                     }
 
 
-                    var item32 = document.getElementById('piyoz1');
+                    var item32 = document.getElementById('soyabon');
                     var rect32 = item32.getBoundingClientRect();
                     var topPosition32 = rect32.left;
 
 
                     if(topPosition4<topPosition32&&topPosition32<topPosition4+top4width){
 
-                          document.getElementById('piyoz12').disabled=true;
-                          document.getElementById('piyoz12').style.backgroundColor = 'green';
-                          document.getElementById('piyoz12').style.border = '4px solid red';
+                          document.getElementById('soyabon').disabled=true;
+                          document.getElementById('soyabon').style.backgroundColor = 'green';
+                          document.getElementById('soyabon').style.border = '4px solid red';
                     }
 
                     else{
 
-                      document.getElementById('piyoz12').disabled=true;
-                      document.getElementById('piyoz12').style.backgroundColor = 'red';
-                      document.getElementById('piyoz12').style.border = '4px solid darkblue';
+                      document.getElementById('soyabon').disabled=true;
+                      document.getElementById('soyabon').style.backgroundColor = 'red';
+                      document.getElementById('soyabon').style.border = '4px solid darkblue';
                     }
 
 
 
 
-                    var item6 = document.getElementById('gilos');
+                    var item6 = document.getElementById('gilosf');
                     var rect6 = item6.getBoundingClientRect();
                     var topPosition6 = rect6.left;
                     var top6width=rect6.width;
 
-                    var item7 = document.getElementById('gilos1');
+                    var item7 = document.getElementById('gilos');
                     var rect7 = item7.getBoundingClientRect();
                     var topPosition7 = rect7.left;
 
@@ -464,19 +465,19 @@ var count=0;
 
                     if(topPosition6<topPosition7&&topPosition7<topPosition6+top6width){
 
-                            document.getElementById('gilos1').disabled=true;
-                            document.getElementById('gilos1').style.backgroundColor = 'green';
-                            document.getElementById('gilos1').style.border = '4px solid red';
+                            document.getElementById('gilos').disabled=true;
+                            document.getElementById('gilos').style.backgroundColor = 'green';
+                            document.getElementById('gilos').style.border = '4px solid red';
                     }
 
                     else{
 
-                          document.getElementById('gilos1').disabled=true;
-                          document.getElementById('gilos1').style.backgroundColor = 'red';
-                          document.getElementById('gilos1').style.border = '4px solid darkblue';
+                          document.getElementById('gilos').disabled=true;
+                          document.getElementById('gilos').style.backgroundColor = 'red';
+                          document.getElementById('gilos').style.border = '4px solid darkblue';
                     }
 
-                    var item72 = document.getElementById('gilos12');
+                    var item72 = document.getElementById('nok');
                     var rect72 = item72.getBoundingClientRect();
                     var topPosition72 = rect72.left;
 
@@ -484,21 +485,21 @@ var count=0;
 
                     if(topPosition6<topPosition72&&topPosition72<topPosition6+top6width){
 
-                            document.getElementById('gilos12').disabled=true;
-                            document.getElementById('gilos12').style.backgroundColor = 'green';
-                            document.getElementById('gilos12').style.border = '4px solid red';
+                            document.getElementById('nok').disabled=true;
+                            document.getElementById('nok').style.backgroundColor = 'green';
+                            document.getElementById('nok').style.border = '4px solid red';
                     }
 
                     else{
 
-                          document.getElementById('gilos12').disabled=true;
-                          document.getElementById('gilos12').style.backgroundColor = 'red';
-                          document.getElementById('gilos12').style.border = '4px solid darkblue';
+                          document.getElementById('nok').disabled=true;
+                          document.getElementById('nok').style.backgroundColor = 'red';
+                          document.getElementById('nok').style.border = '4px solid darkblue';
                     }
 
 
 
-                    var item73 = document.getElementById('gilos13');
+                    var item73 = document.getElementById('qalqon');
                     var rect73 = item73.getBoundingClientRect();
                     var topPosition73 = rect73.left;
 
@@ -506,61 +507,61 @@ var count=0;
 
                     if(topPosition6<topPosition73&&topPosition73<topPosition6+top6width){
 
-                            document.getElementById('gilos13').disabled=true;
-                            document.getElementById('gilos13').style.backgroundColor = 'green';
-                            document.getElementById('gilos13').style.border = '4px solid red';
+                            document.getElementById('qalqon').disabled=true;
+                            document.getElementById('qalqon').style.backgroundColor = 'green';
+                            document.getElementById('qalqon').style.border = '4px solid red';
                     }
 
                     else{
 
-                          document.getElementById('gilos13').disabled=true;
-                          document.getElementById('gilos13').style.backgroundColor = 'red';
-                          document.getElementById('gilos13').style.border = '4px solid darkblue';
+                          document.getElementById('qalqon').disabled=true;
+                          document.getElementById('qalqon').style.backgroundColor = 'red';
+                          document.getElementById('qalqon').style.border = '4px solid darkblue';
                     }
 
 
 
 
-                    var div8 = document.getElementById('makka');
+                    var div8 = document.getElementById('makkaf');
                     var div8rect = div8.getBoundingClientRect();
                     var topPosition8 = div8rect.left;
                     var top8width=div8rect.width;
 
-                    var div9 = document.getElementById('makka1');
+                    var div9 = document.getElementById('makka');
                     var div9rect = div9.getBoundingClientRect();
                     var topPosition9 = div9rect.left;
 
 
                     if(topPosition8<topPosition9&&topPosition9<=topPosition8+top8width){
-                        document.getElementById('makka1').disabled=true;
-                        document.getElementById('makka1').style.backgroundColor = 'green';
-                        document.getElementById('makka1').style.border = '4px solid red';
+                        document.getElementById('makka').disabled=true;
+                        document.getElementById('makka').style.backgroundColor = 'green';
+                        document.getElementById('makka').style.border = '4px solid red';
                     }
 
                     else{
-                        document.getElementById('makka1').disabled=true;
-                        document.getElementById('makka1').style.backgroundColor = 'red';
-                        document.getElementById('makka1').style.border = '4px solid darkblue';
+                        document.getElementById('makka').disabled=true;
+                        document.getElementById('makka').style.backgroundColor = 'red';
+                        document.getElementById('makka').style.border = '4px solid darkblue';
                     }
 
 
 
 
-                    var div92 = document.getElementById('makka12');
+                    var div92 = document.getElementById('sota');
                     var div92rect = div92.getBoundingClientRect();
                     var topPosition92 = div92rect.left;
 
 
                     if(topPosition8<topPosition92&&topPosition92<=topPosition8+top8width){
-                        document.getElementById('makka12').disabled=true;
-                        document.getElementById('makka12').style.backgroundColor = 'green';
-                        document.getElementById('makka12').style.border = '4px solid red';
+                        document.getElementById('sota').disabled=true;
+                        document.getElementById('sota').style.backgroundColor = 'green';
+                        document.getElementById('sota').style.border = '4px solid red';
                     }
 
                     else{
-                        document.getElementById('makka12').disabled=true;
-                        document.getElementById('makka12').style.backgroundColor = 'red';
-                        document.getElementById('makka12').style.border = '4px solid darkblue';
+                        document.getElementById('sota').disabled=true;
+                        document.getElementById('sota').style.backgroundColor = 'red';
+                        document.getElementById('sota').style.border = '4px solid darkblue';
                     }
 
 

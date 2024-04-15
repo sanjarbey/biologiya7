@@ -351,7 +351,7 @@ var count=0;
 
 
 
-                    var voy=(voyatop<=togritop&& voyatop<=toliqtop&& voyatop<=chalatop&& voyatop<=keksatop)&& (voyaleft<=keksaleft&&voyaleft<toliqleft)&&voyaleft>togrileft
+                    var voy=(voyatop<=togritop&& voyatop<=toliqtop&& voyatop<=chalatop)&& (voyaleft<=keksaleft&&voyaleft<toliqleft)&&voyaleft>togrileft
 
                     if (voy) {
                         document.getElementById('voya').disabled=true;
@@ -386,7 +386,7 @@ var count=0;
 
 
 
-                    var kek=keksatop>voyatop&&keksatop<chalatop&&keksaleft>voyaleft&&keksaleft>chalaleft;
+                    var kek=keksatop<chalatop&&keksaleft>voyaleft&&keksaleft>chalaleft;
 
                     if(kek){
 
